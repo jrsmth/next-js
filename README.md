@@ -12,5 +12,11 @@ Next.js Training
 
 <br>
 
-## Project
-* [Foodies](./project/foodies)
+## Projects
+* [Foodies](./projects/foodies)
+
+<br>
+
+## Notes
+* Max Schwarzmueller Udemy Course:
+    * [Next.js & React - The Complete Guide](https://www.udemy.com/course/nextjs-react-the-complete-guide/learn/lecture/41159650#overview)
