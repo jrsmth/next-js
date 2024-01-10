@@ -22,6 +22,16 @@
 
 <br>
 
+## Navigation
+* Next.js provides a `<Link>` component that should be used for navigating between `page.*`'s
+    * This enables our app to leaverage the prerendering advantages of SSR but also be a modern reactive SPA after the initial page load
+* Example:
+    ```typescript
+        <Link href='about-us'>About Us</Link>
+    ```
+
+<br>
+
 ## Server vs Client Components
 ```typescript
     export default function Home() {
