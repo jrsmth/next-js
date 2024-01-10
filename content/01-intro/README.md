@@ -12,7 +12,8 @@
 <br>
 
 ## New App
-* Create app : `npx create-next-app@latest`
+* Create app : `npx create-next-app@latest <APP-NAME>`
+    * Replacing `<APP-NAME>` with `.` creates the app in the current directory
 * Start app  : `npm run dev`
 
 <br>

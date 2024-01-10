@@ -9,3 +9,8 @@ Next.js Training
 * [Introduction](./content/01-intro)
 * [React Specifics](./content/02-react)
 * [Next.js Essentials](./content/03-essentials)
+
+<br>
+
+## Project
+* [Foodies](./project/foodies)
