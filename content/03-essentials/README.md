@@ -19,6 +19,20 @@
                     );
                 }
             ```
+* Dynamic Routing:
+    * Creating sub-directories using the naming convention `[<PARAMETER_NAME>]` will create dynamic routes
+    * Example:
+        * A `/app/blog/[id]/page.tsx` folder structure will create a route for `/app/blog/{id}`
+        ```typescript
+            export default function BlogPostPage() {
+                return(
+                    <main>
+                        <h1>Blog {params.id}</h1>
+                    </main>
+                )
+            }
+        ```
+        * Note: the `params` variable is an object that stores the parameter supplied in the dynamic router
 
 <br>
 
