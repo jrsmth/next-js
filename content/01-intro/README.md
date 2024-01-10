@@ -14,3 +14,10 @@
 ## New App
 * Create app : `npx create-next-app@latest`
 * Start app  : `npm run dev`
+
+<br>
+
+## Pages Router vs App Router
+* The Pages and App Router are two different ways of handling router in Next.js
+* Pages Router has existed for longer and is considered a stable choice
+* App Router is the modern recommendation that was introduced with Next.js version 13
