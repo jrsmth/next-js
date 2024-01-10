@@ -65,11 +65,11 @@
             };
 
             export default function RootLayout({ children }) {
-            return (
-                <html lang="en">
-                    <body>{children}</body>
-                </html>
-            );
+                return (
+                    <html lang="en">
+                        <body>{children}</body>
+                    </html>
+                );
             }
         ```
         * Note: 
@@ -80,3 +80,22 @@
 
 ## Favicon
 * In the root `/app` folder, the reserved `icon.png` file represents the application favicon
+
+<br>
+
+## Regular (Non-Page) Components
+* We can still break our pages down into reusable components
+* We do this by creating standard react components, placed in files named using the component name
+    * Typically, these would be placed in a `/app/components` but the [docs](https://nextjs.org/docs/app/building-your-application/routing/colocation) discuss other recommendations
+* Example:
+    ```typescript
+        export default function Header() {
+            return (
+                <>
+                    <h1>App Name</h1>
+                </>
+            )
+        }
+    ```
+    * Note: `import Header from '@/components/header';` can be used to import the fragment in other components
+        * Where the `@` refers to our root `/app` directory
