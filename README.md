@@ -19,4 +19,4 @@ Next.js Training
 
 ## Notes
 * Max Schwarzmueller Udemy Course:
-    * [Next.js & React - The Complete Guide](https://www.udemy.com/course/nextjs-react-the-complete-guide/learn/lecture/41159650#overview)
+    * [Next.js 14 & React - The Complete Guide](https://www.udemy.com/course/nextjs-react-the-complete-guide/learn/lecture/41159650#overview)
