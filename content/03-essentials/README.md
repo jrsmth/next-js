@@ -63,6 +63,7 @@
 ```
 * This component is by default a Server component, meaning that it is rendered on the server and not the client
     * As a result, the `console.log()` outputted in the server logs and not in the browser
+    * Components should leverage the advantages of server components, unless requiring functionality that is only available on the client
 * If we wanted this to be a Client component, we would add the `'use client'` directive to the top of the component file
   * Ex: we would want to use a client component when using the `onClick` mechanism, as this would not be available on the server
   * It is best-practise to use `'use client'` as far down the component tree as possible in order to maximise the optimisations provided by server components
@@ -135,4 +136,60 @@
 ## Images
 * Next.js provides an `<Image>` component which offers optimisations (such as lazy-loading)
   * It is best-practise to use this component rather than the standard `<img>` element
-* Docs: https://nextjs.org/docs/app/api-reference/components/image
+* [Docs](https://nextjs.org/docs/app/api-reference/components/image)
+
+<br>
+
+## Server Actions
+* Server Actions are asynchronous functions that are executed on the server
+  * They allow you to send requests to the server-side of the Next.js app
+* Example:
+  * Inside a component:
+    * Note: this only works if `ShareMealsPage` is a server component
+    ```tsx
+        export default function ShareMealPage() {
+            async function shareMeal(formData) {
+                "use server";
+                
+                const meal = {
+                    title: formData.get('title')
+                }
+    
+                // do something...
+            }
+    
+            return (
+                <form action={shareMeal}>
+                    <label htmlFor="title">Title</label>
+                    <input type="text" id="title" name="title" required />
+                </form>
+            )
+        }
+    ```
+  * Import into a component:
+    * Note: this can now be used in both server and client components
+    ```tsx
+        // inside "@/lib/actions.ts"
+        "use server";
+        export async function shareMeal(formData) {
+                const meal = {
+                    title: formData.get('title')
+                }
+    
+                // do something...
+        }
+    
+        // inside "@/app/meal/share"
+        //"use client/server";
+        import {shareMeal} from "@/lib/actions.ts"
+        
+        export default function ShareMealsPage(){
+            return (
+                <form action={shareMeal}>
+                    <label htmlFor="title">Title</label>
+                    <input type="text" id="title" name="title" required />
+                </form>
+            )
+        }
+
+    ```
