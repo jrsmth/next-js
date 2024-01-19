@@ -9,11 +9,13 @@ Next.js Training
 * [Introduction](./content/01-intro)
 * [React Specifics](./content/02-react)
 * [Next.js Essentials](./content/03-essentials)
+* [Authentication](./content/04-authentication)
 
 <br>
 
 ## Projects
 * [Foodies](./projects/foodies)
+* [Next Auth](./projects/next-auth)
 
 <br>
 
